@@ -20,3 +20,14 @@ jobs:
     steps:
       - name: Second job
         run: echo "second job executed"
+      - name: Printing secret  
+        run: echo "${{ secrets.SECRET_TOKEN }}"
+
+  installing services:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install redis cli
+      run: sudo apt-get update -y && sudo apt-get install redis-tools -y
+
+    - name: Test redis
+      run: redis-cli -h localhost -p 6379 ping
