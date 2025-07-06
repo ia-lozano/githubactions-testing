@@ -23,7 +23,7 @@ jobs:
       - name: Printing secret  
         run: echo "${{ secrets.SECRET_TOKEN }}"
 
-  installing services:
+  installing redis cli:
     runs-on: ubuntu-latest
     steps:
     - name: Install redis cli
