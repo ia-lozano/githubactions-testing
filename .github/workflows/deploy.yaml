@@ -12,8 +12,8 @@ jobs:
       - run: echo "1st job executed"
 
   second-job:
-    # Conditional: if main is the reference, then run the jon
-    if: ${{ github.ref == "refs/heads/main" }}
+    # Conditional: if main is the reference, then run the jon, context.
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: first-job # First job must run first (secuential)
     runs-on: ubuntu-latest
 
