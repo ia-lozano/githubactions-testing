@@ -1,0 +1,13 @@
+name: "testing Git Hub Actions!"
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  test-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "Pull code"
+      run: echo "Run migrations"
+      run: echo "Publish version"
